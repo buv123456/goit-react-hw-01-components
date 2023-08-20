@@ -1,9 +1,11 @@
+import { Mark } from './Friend.styled';
+
 export function Friend({ avatar, name, isOnline }) {
   return (
     <>
-      <span className="status" color={isOnline ? 'green' : 'red'}></span>
-      <img className="avatar" src={avatar} alt={name} width="48" />
-      <p className="name">{name}</p>
+      <Mark color={isOnline ? 'green' : 'red'}></Mark>
+      <img src={avatar} alt={name} width="48" />
+      <p>{name}</p>
     </>
   );
 }
