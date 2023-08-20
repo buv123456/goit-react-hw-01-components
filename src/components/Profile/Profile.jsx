@@ -1,12 +1,12 @@
-import { ProfileCard } from './Profile.styled';
+import { Card } from './Profile.styled';
 import { ProfileDescription } from 'components/Profile/ProlileDescription/ProfileDescription';
-import { ProfileSocialList } from 'components/Profile/ProfileSocialList/ProfileSocialList';
+import { ProfileSocialList } from 'components/Profile/ProfileList/ProfileList';
 
 export function Profile({ user }) {
   return (
-    <ProfileCard className="profile">
+    <Card>
       <ProfileDescription user={user} />
       <ProfileSocialList stats={user.stats} />
-    </ProfileCard>
+    </Card>
   );
 }

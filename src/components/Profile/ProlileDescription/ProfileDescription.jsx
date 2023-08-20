@@ -1,16 +1,22 @@
-// import { Description } from "./ProfileDescription.styled";
 import PropTypes from 'prop-types';
+import {
+  Avatar,
+  Description,
+  Locat,
+  Name,
+  Tag,
+} from './ProfileDescription.styled';
 
 export function ProfileDescription({
   user: { avatar, username, tag, location },
 }) {
   return (
-    <div>
-      <img src={avatar} alt={username} className="avatar" />
-      <p className="name">{username}</p>
-      <p className="tag">@{tag}</p>
-      <p className="location">{location}</p>
-    </div>
+    <Description>
+      <Avatar src={avatar} alt={username} className="avatar" />
+      <Name className="name">{username}</Name>
+      <Tag className="tag">@{tag}</Tag>
+      <Locat className="location">{location}</Locat>
+    </Description>
   );
 }
 

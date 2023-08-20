@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
 import { capitalCase } from 'change-case';
-import { ProfileSocialItem } from 'components/Profile/ProfileSocialItem/ProfiSocialItem';
+import { Item, List } from './ProfileList.styled';
+import { ProfileListItem } from '../ProfileListItem/ProfileListItem';
 
 export function ProfileSocialList({ stats }) {
   return (
-    <ul className="stats">
+    <List>
       {Object.entries(stats).map((item, i) => (
-        <li key={item[0]}>
-          <ProfileSocialItem info={capitalCase(item[0])} quantity={item[1]} />
-        </li>
+        <Item key={item[0]}>
+          <ProfileListItem info={capitalCase(item[0])} quantity={item[1]} />
+        </Item>
       ))}
-    </ul>
+    </List>
   );
 }
 
