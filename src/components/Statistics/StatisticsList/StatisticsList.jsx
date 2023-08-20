@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types';
 import { StatisticsItem } from '../StatisticsItem/StatisticsItem';
+import { Item, List } from './StatisticsList.styled';
+
+const colors = ['skyblue', 'violet', 'red', 'turquoise', 'limegreen'];
 
 export function StatisticsList({ statsData }) {
   return (
-    <ul className="stat-list">
-      {statsData.map(i => (
-        <li className="item" key={i.id}>
+    <List>
+      {statsData.map((i, idx) => (
+        <Item key={i.id} color={colors[idx]}>
           <StatisticsItem label={i.label} value={i.percentage} />
-        </li>
+        </Item>
       ))}
-    </ul>
+    </List>
   );
 }
 

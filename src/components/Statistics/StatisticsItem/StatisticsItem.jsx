@@ -1,8 +1,10 @@
+import { Label, Value } from './StatisticsItem.styled';
+
 export function StatisticsItem({ label, value }) {
   return (
     <>
-      <span className="label">{label}</span>
-      <span className="percentage">{value}%</span>
+      <Label className="label">{label}</Label>
+      <Value className="percentage">{value}%</Value>
     </>
   );
 }
