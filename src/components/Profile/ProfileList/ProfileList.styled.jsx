@@ -5,7 +5,7 @@ export const List = styled.ul`
   height: 60px;
   display: flex;
   justify-content: space-around;
-  background-color: #d6d6d6;
+  ${({ theme }) => theme.bgColor};
   border-top: 2px solid #c9c9c9;
 `;
 

@@ -7,5 +7,5 @@ export const Info = styled.span`
 export const Quantity = styled.span`
   font-size: 18px;
   font-weight: bold;
-  color: #040404;
+  color: ${({ theme }) => theme.textColor.dark};
 `;

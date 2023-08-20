@@ -13,7 +13,7 @@ export const Item = styled.li`
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: #fff;
+  color: ${({ theme }) => theme.textColor.light};
 
   background-color: ${({ color }) => color};
 `;

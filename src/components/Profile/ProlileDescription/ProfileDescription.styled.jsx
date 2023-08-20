@@ -17,7 +17,7 @@ export const Avatar = styled.img`
 export const Name = styled.p`
   font-size: 24px;
   font-weight: bold;
-  color: #040404;
+  color: ${({ theme }) => theme.textColor.dark};
   margin-bottom: 20px;
 `;
 

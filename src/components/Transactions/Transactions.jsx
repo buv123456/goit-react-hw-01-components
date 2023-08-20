@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
 import { TransactionsBody } from './TransactionsBody/TransactionsBody';
 import { TransactionsHead } from './TransactionsHead/TransactionsHead';
+import { Table } from './Transactions.slyled';
 
-export function TransactionHistory({ transactions }) {
+export function Transactions({ transactions }) {
   return (
-    <table className="transaction-history">
+    <Table>
       <TransactionsHead />
       <TransactionsBody items={transactions} />
-    </table>
+    </Table>
   );
 }
 
-TransactionHistory.propTypes = {
+Transactions.propTypes = {
   transactions: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
