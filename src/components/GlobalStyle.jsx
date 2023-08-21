@@ -24,7 +24,7 @@ ul {
   list-style: none;
 }
 
-td, th{
+table, td, th{
   border-color: #c9c9c9;
   border-width: 0 1px 1px 0;
   border-style: solid;

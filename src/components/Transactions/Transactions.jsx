@@ -13,13 +13,5 @@ export function Transactions({ transactions }) {
 }
 
 Transactions.propTypes = {
-  transactions: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-      amount: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-        .isRequired,
-      currency: PropTypes.string.isRequired,
-    }).isRequired
-  ).isRequired,
+  transactions: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
 };

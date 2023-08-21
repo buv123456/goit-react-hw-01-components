@@ -11,7 +11,7 @@ export const Title = styled.h1`
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
-  display: ${({ children }) => (children ? 'flex' : 'none')};
+  display: flex;
   align-items: center;
   justify-content: center;
 `;

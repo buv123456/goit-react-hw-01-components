@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { capitalCase } from 'change-case';
 
 export function TransactionsItem({ item }) {
@@ -9,3 +10,12 @@ export function TransactionsItem({ item }) {
     </>
   );
 }
+
+TransactionsItem.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.string,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+  }).isRequired,
+};

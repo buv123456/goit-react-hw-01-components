@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import { StatisticsList } from './StatisticsList/StatisticsList';
 import { Title, Wrap } from './Statistics.styled';
 
-export function Statistics({ title = '', stats }) {
+export function Statistics({ title, stats }) {
   return (
     <Wrap>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
       <StatisticsList statsData={stats} />
     </Wrap>
   );

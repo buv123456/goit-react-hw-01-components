@@ -12,10 +12,10 @@ export function ProfileDescription({
 }) {
   return (
     <Description>
-      <Avatar src={avatar} alt={username} className="avatar" />
-      <Name className="name">{username}</Name>
-      <Tag className="tag">@{tag}</Tag>
-      <Locat className="location">{location}</Locat>
+      <Avatar src={avatar} alt={username} />
+      <Name>{username}</Name>
+      <Tag>@{tag}</Tag>
+      <Locat>{location}</Locat>
     </Description>
   );
 }
